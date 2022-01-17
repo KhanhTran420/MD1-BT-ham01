@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bt5</title>
+</head>
+<body>
+<p id="nono"></p>
+<script>
+    let ngoisao = ["polaris","aldebaran","deneb","vega","altair","dubhe","regul"]
+    let chomsao = ["ursa minor","tarurus","cygnus","lyra","aquila","ursa major","leo"]
+
+    function findstar(name) {
+        for (let i = 0; i < ngoisao.length; i++) {
+            if(ngoisao[i]==name){
+                return i
+            }
+        }
+        return  -1;
+    }
+       function displaystar() {
+           let start = prompt("moi ban nhap ten ngoi sao")
+           let index = findstar(start)
+           if (index!==-1){
+               alert("ngoi sao " + start +" thuoc chom sao " + chomsao[index])
+           }
+           else {
+               alert("khong tim thay ngoi sao tuong ung")
+           }
+       }
+       displaystar();
+</script>
+</body>
+</html>
